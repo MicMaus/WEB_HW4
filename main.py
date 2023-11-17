@@ -60,7 +60,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 
 def run():
-    server_address = ("", http_port)
+    server_address = ("0.0.0.0", http_port)
     http = HTTPServer(server_address, RequestHandler)
     http.serve_forever()
 
