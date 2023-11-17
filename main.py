@@ -108,9 +108,10 @@ udp_server_thread = threading.Thread(target=udp_server, args=(host, socket_port)
 
 
 if __name__ == "__main__":
+    print("server started")
+
     http_server_thread.start()
     udp_server_thread.start()
 
     http_server_thread.join()
     udp_server_thread.join()
-    print("server started")
